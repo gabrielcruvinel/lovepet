@@ -5,11 +5,18 @@ const Model = use('Model')
 
 class Usuario extends Model {
     static get table () {
-        return 'usuario'
+        return 'usuario';
       }
 
     static get primaryKey () {
-      return 'id_usuario'
+      return 'id_usuario';
+    }
+    static get createdAtColumn() {
+      return 'dt_inicio';
+    }
+
+    static get createdAtColumn() {
+      return 'dt_inicio';
     }
 }
 

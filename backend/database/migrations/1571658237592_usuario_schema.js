@@ -13,7 +13,6 @@ class UsuarioSchema extends Schema {
       table.date('dt_nascimento')
       table.timestamp('dt_inicio').defaultTo(this.fn.now()).notNullable()
       table.timestamp('dt_fim').defaultTo(null)
-      table.timestamps()
     })
   }
 
