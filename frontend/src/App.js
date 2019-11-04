@@ -1,12 +1,22 @@
 import React from 'react';
-import Header from './components/principal/Header';
+import { Router } from 'react-router-dom';
+import history from './services/history';
+import Header from './components/Header';
+import Routes from  './routes';
+import './config/ReactotronConfig';
 import './styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
+import GlobalStyle from './styles/global';
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => (
 
     <div className="App">
-      <Header />
+      <Router history={history}>
+        <Routes />
+        <GlobalStyle />
+      </Router>
     </div>
 )
 

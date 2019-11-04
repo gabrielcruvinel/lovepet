@@ -1,0 +1,19 @@
+/* #principal-infos-esquerdo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #248ea9;
+    z-index: 1;
+} */
+#principal-info-direito{
+    justify-content: center;
+    align-items: center;
+}
+#row-principal-direito{
+    margin-top: 45%;
+}
+#title-principal-direito{
+    text-align: center;
+} 
