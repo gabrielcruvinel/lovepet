@@ -1,5 +1,5 @@
 /* #principal-infos-esquerdo{
-    position: fixed;
+    display: block;
     top: 0px;
     left: 0px;
     width: 50%;
@@ -7,13 +7,44 @@
     background-color: #248ea9;
     z-index: 1;
 } */
+body{
+    background: rgb(36,142,169) !important;
+    background: linear-gradient(90deg, rgba(36,142,169,1) 50%, rgba(240,227,196,1) 50%) !important;
+}
 #principal-info-direito{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 50%;
     justify-content: center;
     align-items: center;
+    display: grid;
 }
 #row-principal-direito{
     margin-top: 45%;
 }
-#title-principal-direito{
+#title-principal-direito, #btn-cadastrar{
     text-align: center;
-} 
+}
+#title-principal-direito{
+    padding-top: 100px;
+}
+.text-principal-info{
+    display: block;
+    margin-left: 12%;
+    padding-top: 30px;
+    font-size: 27px;
+    color: #00e3c4;
+}
+.txt-principal{
+    text-align: center;
+    color: #00e3c4;
+}
+#col-txt-principal{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+#quem-somos{
+    padding-top: 70%;
+    margin-left: 20px;
+}
