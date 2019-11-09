@@ -1,7 +1,6 @@
 import React from 'react';
 import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline } from "react-icons/md";
 import { Link } from 'react-router-dom'; //REDIRECIONA A PAGINA
-import { Button } from 'antd';
 import { 
   Container,
   Preview,
