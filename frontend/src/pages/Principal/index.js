@@ -1,7 +1,9 @@
 import React from 'react';
+import { Form, Input } from '@rocketseat/unform';
 import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline } from "react-icons/md";
 import { Link } from 'react-router-dom'; //REDIRECIONA A PAGINA
-import { Button } from 'antd';
+import * as Yup from 'yup';
+
 import { 
   Container,
   Preview,
@@ -14,7 +16,27 @@ import {
   BtnMoreInfo 
 } from './styles.js';
 
+const schema = Yup.object().shape({
+
+  email: Yup.string()
+  .email('Digite um email válido')
+  .required('Digite um email'),
+
+  password: Yup.string()
+  .required('É preciso digitar uma senha'),
+
+});
+
 export default function Principal() {
+
+  function handleSubmit( data ) {
+    console.tron.log(data)
+  }
+
+  // function validateEmail( data ) {
+  //   console.log(data)
+  // }
+
   return (
     <Container>
       <Preview>
@@ -41,13 +63,15 @@ export default function Principal() {
           </div>
         </PrincipalInfo>
       </Preview>
+
+      {/***********************LOGIN*** */}
       <PrincipalLogin>
           <h1>Entrar</h1>
-          <form>
-            <input type="email" placeholder="Digite seu email"></input>
-            <input type="password" placeholder="Digite sua senha"></input>
+          <Form schema={ schema }  onSubmit={ handleSubmit }>
+            <Input name="email" type="email" placeholder="Digite seu email"></Input>
+            <Input name="password" type="password" placeholder="Digite sua senha"></Input>
             <button type="submit">Entrar</button>
-          </form>
+          </Form>
           <div>
             <BtnCadastro>
               <TitleCadastro><h2>Participe dessa comunidade agora</h2></TitleCadastro>

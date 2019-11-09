@@ -48,16 +48,20 @@ export const PrincipalLogin = styled.div`
         flex-direction:column;
         margin-top:30px;
         width:270px;
-    }
-    input{
-        background: rgba(0, 0, 0 , 0.1);
-        border: 0px;
-        border-radius: 4px;
-        height: 44px;
-        padding: 0 15px;
-        margin: 0 0 10px;
-        &::placeholder {
-        color: rgba(0, 0, 0, 0.7);
+    
+        input{
+            background: rgba(0, 0, 0 , 0.1);
+            border: 0px;
+            border-radius: 4px;
+            height: 44px;
+            padding: 0 15px;
+            margin: 0 0 10px;
+                &::placeholder {
+                color: rgba(0, 0, 0, 0.7);
+                }
+        }
+        span{
+            color:red;
         }
     }
     button {
