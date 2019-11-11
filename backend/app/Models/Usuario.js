@@ -15,7 +15,7 @@ class Usuario extends Model {
       return 'dt_inicio';
     }
 
-    static get createdAtColumn() {
+    static get updatedAtColumn() {
       return 'dt_inicio';
     }
 }
