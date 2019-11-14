@@ -6,13 +6,13 @@ const Schema = use('Schema')
 class PetSchema extends Schema {
   up () {
     this.create('pet', (table) => {
-      table.increments()
+      table.increments('id_pet')
       table
-      .integer('user_id')
+      .integer('usuario_id')
       .unsigned()
       .notNullable()
-      .references('id')
-      .inTable('users')
+      .references('id_usuario')
+      .inTable('usuario')
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
 
@@ -20,7 +20,7 @@ class PetSchema extends Schema {
       .integer('pet_tipo_id')
       .unsigned()
       .notNullable()
-      .references('id')
+      .references('id_pet_tipo')
       .inTable('pet_tipo')
 
       table.string('nome', 40).notNullable()

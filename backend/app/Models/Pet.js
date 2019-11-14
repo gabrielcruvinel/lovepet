@@ -5,7 +5,16 @@ const Model = use('Model')
 
 class Pet extends Model {
     static get table () {
-        return  'Pet'
+        return  'pet';
+    }
+    static get primaryKey () {
+        return 'id_pet';
+    }
+    static get createdAtColumn() {
+        return 'dt_inicio';
+    }
+    static get updatedAtColumn() {
+        return 'dt_inicio';
     }
 }
 
