@@ -2,8 +2,7 @@ import React from 'react';
 
 import { 
   BodyCadastro,
-  SideElement,
-  CenterElement,
+  CadastroElement,
   BtnCadastro,
   CampoPreencher
 } from './styles.js';
@@ -12,7 +11,7 @@ import {
 export default function Cadastro() {
   return (
     <BodyCadastro>
-      <CenterElement>
+      <CadastroElement>
         <h1>Cadastro</h1>
         <form>
           <CampoPreencher>
@@ -39,7 +38,7 @@ export default function Cadastro() {
             <button type="submit">Cadastrar</button>
           </BtnCadastro>
         </form>
-      </CenterElement>
+      </CadastroElement>
     </BodyCadastro>
   );
 }

@@ -1,9 +1,30 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import { 
+  Container,
+  Perfil,
+  Principal,
+  UsuarioPerfil,
+  BoxMensagens,
+  IconesAtalhos
+} from './styles.js';
 
 export default function Dashboard() {
   return (
-    <h1>Dashboard</h1>
+    <Container>
+      <Perfil>
+        <UsuarioPerfil>
+
+        </UsuarioPerfil>
+        <BoxMensagens>
+
+        </BoxMensagens>
+        <IconesAtalhos>
+
+        </IconesAtalhos>
+      </Perfil>
+      <Principal>
+
+      </Principal>
+    </Container>
   );
 }
