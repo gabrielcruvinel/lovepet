@@ -8,7 +8,11 @@ class PetSchema extends Schema {
     this.create('pet', (table) => {
       table.increments('id_pet')
       table
+<<<<<<< HEAD
+      .integer('id_usuario')
+=======
       .integer('usuario_id')
+>>>>>>> 6583f118791d4f995539c49767c1cad7c238df60
       .unsigned()
       .notNullable()
       .references('id_usuario')
@@ -17,7 +21,7 @@ class PetSchema extends Schema {
       .onDelete('CASCADE')
 
       table
-      .integer('pet_tipo_id')
+      .integer('id_pet_tipo')
       .unsigned()
       .notNullable()
       .references('id_pet_tipo')
