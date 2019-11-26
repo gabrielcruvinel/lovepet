@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function RouteWrapper({
     component: Component,
     isPrivate, 
-    ... rest
+    ...rest
 }) {
     //VERIFICA SE O USUARIO TA LOGADO
     const signed = false;
