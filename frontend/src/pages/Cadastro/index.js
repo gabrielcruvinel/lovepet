@@ -13,7 +13,7 @@ export default function Cadastro() {
   return (
     <BodyCadastro>
       <CenterElement>
-        <h1>Criar sua conta</h1>
+        <h1>Cadastro</h1>
         <form>
           <CampoPreencher>
             <label>Nome</label>
