@@ -6,7 +6,7 @@ const Schema = use('Schema')
 class PetTipoSchema extends Schema {
   up () {
     this.create('pet_tipo', (table) => {
-      table.increments()
+      table.increments('id_pet_tipo')
       table.string('especie_pet', 80).notNullable().defaultTo('Cachorro')
       table.string('raca_pet', 80).defaultTo(null)
       table.timestamp('dt_inicio').notNullable().defaultTo(this.fn.now())
