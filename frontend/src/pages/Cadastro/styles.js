@@ -1,10 +1,27 @@
 import styled from 'styled-components';
+import pets from '../../images/pets.jpg';
 
 export const BodyCadastro = styled.div`
+    /* background: linear-gradient(to right, rgba(44,136,159,1), rgba(184,223,233,1)); */
+    background: linear-gradient(90deg, rgba(44,136,159,1) 2%, rgba(240,227,196,0.8253676470588236) 62%);
     display:flex;
     flex-direction:row;
     height:100vh;
-    background: linear-gradient(to right, rgba(44,136,159,1), rgba(184,223,233,1));
+    /* div::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background-image: url(${pets});
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+} */
+
 `;
 
 
@@ -16,17 +33,14 @@ export const CadastroElement = styled.div`
     align-items:center;
     align-self:center;
     flex-direction: column;
-    border: 2px solid #000;
-    height:500px;
+    border: 5px solid #DBF7FE;
+    border-radius:20px;
+    height:700px;
     h1{
         font-weight: bold;
-        font-size:50px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-size:70px;
+        font-family: 'Lucida Sans';
     }
-    /*form{
-        border: 2px solid #000;
-        padding:20px;
-    }*/
 `;
 
 export const CampoPreencher = styled.div`
@@ -37,6 +51,7 @@ export const CampoPreencher = styled.div`
     height:max-content;
     margin: 10px;
     border: 1px solid #fff;
+    border-radius:10px;
     background: rgba(255,255,255,0.2);
     label{
         font-weight:bold;
@@ -44,10 +59,10 @@ export const CampoPreencher = styled.div`
         padding:5px;
         display:flex;
         flex:1;
-        font-size:15px;
+        font-size:20px;
     }
     input{
-
+        font-size:15px;
     }
 `;
 
@@ -56,6 +71,7 @@ export const BtnCadastro = styled.div`
     justify-content:center;
     width:100%;
     height:max-content;
+    margin: 20px 0 20px 0px;
     button{
         color:#000;
         background: #fff;
@@ -65,14 +81,17 @@ export const BtnCadastro = styled.div`
         font-weight: bold;
         font-size:20px;
         transition: 0.15s;
+        padding:5px 20px 5px 20px;
         &:hover {
             background-color:rgba(24,71,83,1);
             color:#fff;
         }
         &:active{
             background-color: rgba(10,34,40,1);
-        }
-
-        
+        }        
     }
 `;
+
+// export const Imagem = styled.img`
+//     opacity:0.2;
+// `;
