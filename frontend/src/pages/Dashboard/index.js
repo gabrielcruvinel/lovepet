@@ -1,30 +1,21 @@
 import React from 'react';
-import { 
-  Container,
-  Perfil,
-  Principal,
-  UsuarioPerfil,
-  BoxMensagens,
-  IconesAtalhos
-} from './styles.js';
+import { Container, Left, Right } from './styles';
+import CardUsuario from '../../components/CardUsuario';
+import MensagensBox from '../../components/MensagensBox';
+import FooterUsuario from '../../components/FooterUsuario';
 
 export default function Dashboard() {
-  return (
-    <Container>
-      <Perfil>
-        <UsuarioPerfil>
-
-        </UsuarioPerfil>
-        <BoxMensagens>
-
-        </BoxMensagens>
-        <IconesAtalhos>
-
-        </IconesAtalhos>
-      </Perfil>
-      <Principal>
-
-      </Principal>
-    </Container>
+    return (
+        <Container>
+            <Left>
+                <CardUsuario/>
+                <MensagensBox/>
+                <FooterUsuario/>
+            </Left>
+      <Right>
+        <h1>Teste Direito</h1>
+      </Right>
+  </Container>
+  
   );
 }

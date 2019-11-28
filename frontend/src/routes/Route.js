@@ -9,15 +9,15 @@ export default function RouteWrapper({
     ...rest
 }) {
     //VERIFICA SE O USUARIO TA LOGADO
-    const signed = false;
+    // const signed = false;
 
-    if(!signed && isPrivate) {
-        return <Redirect to ="/" />;
-    }
+    // if(!signed && isPrivate) {
+    //     return <Redirect to ="/" />;
+    // }
 
-    if (signed && !isPrivate) {
-        return <Redirect to ="/dashboard" />;
-    }
+    // if (signed && !isPrivate) {
+    //     return <Redirect to ="/dashboard" />;
+    // }
 
     return <Route {... rest} component={Component}/>
 }

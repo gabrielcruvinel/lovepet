@@ -24,3 +24,22 @@ export const Right = styled.div`
     align-items: center;
     flex-direction: column;
 `;
+export const HeaderUsuario = styled.div`
+    border: 1px solid;
+    display:flex; 
+    flex:2;
+    
+`;
+
+export const MensagensBox = styled.div`
+    border: 1px solid;
+    display:flex;
+    flex:4;
+`;
+
+export const FooterUsuario = styled.div`
+    border: 1px solid;
+    display:flex;
+    align-self: flex-end;
+
+`;
