@@ -9,7 +9,7 @@ export default function Routes() {
     return (
         <Switch>
             <Route path="/" exact component={Principal} />
-            <Route path="/dashboard" component={Dashboard}  isPrivate />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/cadastro"  component={Cadastro} />
 
             {/* rota de erro para caminho inexistente */}
