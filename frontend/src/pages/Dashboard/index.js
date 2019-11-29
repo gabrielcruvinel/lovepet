@@ -4,6 +4,8 @@ import CardUsuario from '../../components/CardUsuario';
 import MensagensBox from '../../components/MensagensBox';
 import FooterUsuario from '../../components/FooterUsuario';
 
+
+
 export default function Dashboard() {
     return (
         <Container>
@@ -16,6 +18,5 @@ export default function Dashboard() {
         <h1>Teste Direito</h1>
       </Right>
   </Container>
-  
   );
 }

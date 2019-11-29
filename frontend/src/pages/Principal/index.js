@@ -82,3 +82,21 @@ export default function Principal() {
     </Container>
   );
 }
+
+
+
+// function logar(){
+//   var email = document.getElementsByName('email').value
+//   var senha = document.getElementsByName('password').value
+//   var i=0;
+//   if(email !== ""){
+//     while(Usuarios[i].email !== email && i<Usuarios.length){
+//       i++
+//     }
+//     if(i<Usuarios.length){
+//       if(Usuarios[i].senha === senha){
+//         window.location.assign("/dashboard");
+//       }
+//     }
+//   }
+// }

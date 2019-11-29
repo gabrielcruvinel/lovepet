@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import pets from '../../images/pets.jpg';
+
 
 export const BodyCadastro = styled.div`
     /* background: linear-gradient(to right, rgba(44,136,159,1), rgba(184,223,233,1)); */
@@ -7,21 +7,6 @@ export const BodyCadastro = styled.div`
     display:flex;
     flex-direction:row;
     height:100vh;
-    /* div::before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.1;
-        background-image: url(${pets});
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-size: cover;
-} */
-
 `;
 
 
@@ -35,7 +20,7 @@ export const CadastroElement = styled.div`
     flex-direction: column;
     border: 5px solid #DBF7FE;
     border-radius:20px;
-    height:700px;
+    height:70%;
     h1{
         font-weight: bold;
         font-size:70px;
@@ -91,7 +76,3 @@ export const BtnCadastro = styled.div`
         }        
     }
 `;
-
-// export const Imagem = styled.img`
-//     opacity:0.2;
-// `;
