@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
-import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline, MdAirlineSeatLegroomNormal } from "react-icons/md";
+import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline} from "react-icons/md";
 import { Link } from 'react-router-dom'; //REDIRECIONA A PAGINA
 import * as Yup from 'yup';
 import Usuarios from '../../database/usuarios'
@@ -97,7 +97,6 @@ export default function Principal() {
 
 //FUNCIONANDO
 function logar(){
-  const a = []
   var email = document.getElementById('email').value
   var senha = document.getElementById('password').value
   console.log(email)

@@ -8,7 +8,7 @@ export default function Mensagens(){
     let msg = 'mensagens'+usuarioLogado 
     let divs = []
     //Caso o Usuario nao tenha mensagens
-    if(mensagensTodos[msg]===null || mensagensTodos[msg] == undefined){
+    if(mensagensTodos[msg]===null || mensagensTodos[msg] === undefined){
       divs[0] = <div>
         Sem mensagens
       </div>
