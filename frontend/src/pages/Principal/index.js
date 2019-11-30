@@ -125,6 +125,9 @@ function logar(){
     }
     //AQUI TEM QUE REDIRECIONAR PARA A DASHBOARD, NAO SEI FAZER ISSO
     // <Link to="/dashboard"></Link>
+    let caminho = 'http://'+window.location.host+'/dashboard'
+    setTimeout(()=>window.location.assign(caminho),1500)
+    
   }
 
 
