@@ -17,7 +17,7 @@ import {
   TitleCadastro, 
   BtnMoreInfo 
 } from './styles.js';
-import { array } from 'prop-types';
+
 
 const schema = Yup.object().shape({
 
@@ -123,8 +123,7 @@ function logar(){
       localStorage.removeItem("UsuarioLogado")
       localStorage.setItem("UsuarioLogado",arrayUsuarios[i].nome)
     }
-    //AQUI TEM QUE REDIRECIONAR PARA A DASHBOARD, NAO SEI FAZER ISSO
-    // <Link to="/dashboard"></Link>
+    //Redireciona para a dashboard
     let caminho = 'http://'+window.location.host+'/dashboard'
     setTimeout(()=>window.location.assign(caminho),1500)
     

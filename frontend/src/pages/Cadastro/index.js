@@ -45,7 +45,7 @@ export default function Cadastro() {
   );
 }
 
-//Tentei criar a função cadastro, mas infelizmente só modifica o Usuários desse arquivo, não altera o do outro :(
+//Cadastrando usuarios perfeitamente
 
 function cadastrarUsuario(){
   let nome = document.getElementById('nome').value 
@@ -68,6 +68,7 @@ function cadastrarUsuario(){
     }
   }
   if(senha === confirmaSenha){
+    //Caso tudo esteja certo no cadastro
     var user = new usuario()
     user.nome = nome
     user.email = email
