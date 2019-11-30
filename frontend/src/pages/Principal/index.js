@@ -124,6 +124,7 @@ function logar(){
       localStorage.setItem("UsuarioLogado",arrayUsuarios[i].nome)
     }
     //AQUI TEM QUE REDIRECIONAR PARA A DASHBOARD, NAO SEI FAZER ISSO
+    // <Link to="/dashboard"></Link>
   }
 
 
