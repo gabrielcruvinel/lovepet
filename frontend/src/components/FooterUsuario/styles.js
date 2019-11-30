@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
 	display:flex;
 	height: 10%;
+	background-color: #fff;
 `;
 export const Match = styled.div`
 	flex:1;
