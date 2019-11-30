@@ -1,8 +1,9 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
-import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline } from "react-icons/md";
+import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline, MdAirlineSeatLegroomNormal } from "react-icons/md";
 import { Link } from 'react-router-dom'; //REDIRECIONA A PAGINA
 import * as Yup from 'yup';
+import Usuarios from '../../database/usuarios'
 
 import { 
   Container,
@@ -15,6 +16,7 @@ import {
   TitleCadastro, 
   BtnMoreInfo 
 } from './styles.js';
+import { array } from 'prop-types';
 
 const schema = Yup.object().shape({
 
@@ -27,8 +29,17 @@ const schema = Yup.object().shape({
 
 });
 
-export default function Principal() {
+//Preenche o localStore com os usuarios cadastrados
+function preencheLocalStorage(){
+  if(localStorage.getItem("Usuarios")=== null){
+    let usuarios = Object.assign({},Usuarios)
+    let aux = JSON.stringify(usuarios)
+    localStorage.setItem("Usuarios",aux)
+  }
+}
 
+export default function Principal() {
+  preencheLocalStorage()
   function handleSubmit( data ) {
     console.tron.log(data)
   }
@@ -68,9 +79,9 @@ export default function Principal() {
       <PrincipalLogin>
           <h1>Entrar</h1>
           <Form schema={ schema }  onSubmit={ handleSubmit }>
-            <Input name="email" type="email" placeholder="Digite seu email"></Input>
-            <Input name="password" type="password" placeholder="Digite sua senha"></Input>
-            <button type="submit">Entrar</button>
+            <Input name="email" type="email" id="email" placeholder="Digite seu email"></Input>
+            <Input name="password" type="password" id="password" placeholder="Digite sua senha"></Input>
+            <button type="submit" onClick={logar}>Entrar</button>
           </Form>
           <div>
             <BtnCadastro>
@@ -84,19 +95,37 @@ export default function Principal() {
 }
 
 
+//FUNCIONANDO
+function logar(){
+  const a = []
+  var email = document.getElementById('email').value
+  var senha = document.getElementById('password').value
+  console.log(email)
+  let jsonUsuarios = localStorage.getItem("Usuarios")
+  let objUsuarios = JSON.parse(jsonUsuarios)
+  let arrayUsuarios = Object.values(objUsuarios) 
+  console.log(arrayUsuarios)
+  //Localizar o usuário GAMBIARRA FODAÇ
+  for(var i=0;i<arrayUsuarios.length;i++){
+    if(arrayUsuarios[i].email===email){
+      break
+    }
+  }
+  console.log(arrayUsuarios[i])
 
-// function logar(){
-//   var email = document.getElementsByName('email').value
-//   var senha = document.getElementsByName('password').value
-//   var i=0;
-//   if(email !== ""){
-//     while(Usuarios[i].email !== email && i<Usuarios.length){
-//       i++
-//     }
-//     if(i<Usuarios.length){
-//       if(Usuarios[i].senha === senha){
-//         window.location.assign("/dashboard");
-//       }
-//     }
-//   }
-// }
+  if(i < arrayUsuarios.length && arrayUsuarios[i].senha === senha){
+    //USUARIO IDENTIFICADO E TD CERTO
+    var jsonUserLogado = localStorage.getItem("UsuarioLogado")
+
+    if(jsonUserLogado === null){
+      localStorage.setItem("UsuarioLogado",arrayUsuarios[i].nome)
+    }else{
+      localStorage.removeItem("UsuarioLogado")
+      localStorage.setItem("UsuarioLogado",arrayUsuarios[i].nome)
+    }
+    //AQUI TEM QUE REDIRECIONAR PARA A DASHBOARD, NAO SEI FAZER ISSO
+  }
+
+
+
+}
