@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
-import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline, MdAirlineSeatLegroomNormal } from "react-icons/md";
+import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline} from "react-icons/md";
 import { Link } from 'react-router-dom'; //REDIRECIONA A PAGINA
 import * as Yup from 'yup';
 import Usuarios from '../../database/usuarios'
@@ -17,7 +17,7 @@ import {
   TitleCadastro, 
   BtnMoreInfo 
 } from './styles.js';
-import { array } from 'prop-types';
+
 
 const schema = Yup.object().shape({
 
@@ -97,7 +97,6 @@ export default function Principal() {
 
 //FUNCIONANDO
 function logar(){
-  const a = []
   var email = document.getElementById('email').value
   var senha = document.getElementById('password').value
   console.log(email)
@@ -123,8 +122,10 @@ function logar(){
       localStorage.removeItem("UsuarioLogado")
       localStorage.setItem("UsuarioLogado",arrayUsuarios[i].nome)
     }
-    //AQUI TEM QUE REDIRECIONAR PARA A DASHBOARD, NAO SEI FAZER ISSO
-    // <Link to="/dashboard"></Link>
+    //Redireciona para a dashboard
+    let caminho = 'http://'+window.location.host+'/dashboard'
+    setTimeout(()=>window.location.assign(caminho),1500)
+    
   }
 
 
