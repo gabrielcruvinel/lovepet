@@ -4,6 +4,7 @@ import { MdPets, MdFavoriteBorder, MdQuestionAnswer, MdInfoOutline, MdAirlineSea
 import { Link } from 'react-router-dom'; //REDIRECIONA A PAGINA
 import * as Yup from 'yup';
 import Usuarios from '../../database/usuarios'
+import ArrayToJson from '../../util/ArrayToJson'
 
 import { 
   Container,
@@ -32,8 +33,7 @@ const schema = Yup.object().shape({
 //Preenche o localStore com os usuarios cadastrados
 function preencheLocalStorage(){
   if(localStorage.getItem("Usuarios")=== null){
-    let usuarios = Object.assign({},Usuarios)
-    let aux = JSON.stringify(usuarios)
+    let aux = ArrayToJson(Usuarios)
     localStorage.setItem("Usuarios",aux)
   }
 }

@@ -6,15 +6,16 @@ import mensagensTodos from '../../database/mensagens'
 export default function Mensagens(){
     let usuarioLogado = localStorage.getItem("UsuarioLogado")
     let msg = 'mensagens'+usuarioLogado 
-    let keys = Object.keys(mensagensTodos[msg]) //Para pegar as chaves das mensagens do usuário logado
     let divs = []
     //Caso o Usuario nao tenha mensagens
-    if(keys === []){
+    if(mensagensTodos[msg]===null || mensagensTodos[msg] == undefined){
       divs[0] = <div>
         Sem mensagens
       </div>
       return divs
     }
+    let keys = Object.keys(mensagensTodos[msg]) //Para pegar as chaves das mensagens do usuário logado
+
 
     //Pega todas as mensagens do usuário e cria divs com o conteúdo delas, retornando depois um array com as divs
     for(let i=0;i<keys.length;i++){

@@ -1,6 +1,7 @@
 import React from 'react';
-import Usuarios from '../../database/usuarios'
 import usuario from '../../database/usuarioObject'
+import JsonToArray from '../../util/JsonToArray'
+import ArrayToJson from '../../util/ArrayToJson'
 import { 
   BodyCadastro,
   CadastroElement,
@@ -48,12 +49,31 @@ export default function Cadastro() {
 
 function cadastrarUsuario(){
   let nome = document.getElementById('nome').value 
+  let email = document.getElementById('email').value
   let senha = document.getElementById('senha').value 
   let confirmaSenha = document.getElementById('confirmaSenha').value
+  let json = localStorage.getItem("Usuarios")
+  let arrayUsuarios = JsonToArray(json)
+
+  if(nome === '' || email === '' || senha === ''|| confirmaSenha === ''){
+      //Caso algum campo esteja vazio
+      return
+    }
+
+  for(let i=0;i<arrayUsuarios.length;i++){
+    if(arrayUsuarios[i].email === email){
+      //Email ja cadastrado
+      console.log("Email ja cadastrado")
+      return
+    }
+  }
   if(senha === confirmaSenha){
     var user = new usuario()
     user.nome = nome
+    user.email = email
     user.senha = senha
-    Usuarios.push(user)
+    arrayUsuarios.push(user)
+    let json = ArrayToJson(arrayUsuarios)
+    localStorage.setItem("Usuarios",json)
   }
 }
