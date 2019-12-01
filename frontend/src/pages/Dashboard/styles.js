@@ -28,6 +28,7 @@ export const Right = styled.div`
 
 export const BoxMatch = styled.div`
    
+    flex:1;
     max-height:900px;
     max-width:900px;
     position:fixed;

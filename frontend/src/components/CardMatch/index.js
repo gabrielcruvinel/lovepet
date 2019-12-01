@@ -1,7 +1,7 @@
 import React from 'react';
 import ArrayToJson from '../../util/ArrayToJson'
 import JsonToArray from '../../util/JsonToArray'
-
+import { MdThumbUp, MdThumbDown, MdToc } from 'react-icons/md';
 import { 
     Container,  
     FotoPetMatch,
@@ -44,9 +44,9 @@ export default function CardMatch() {
                 <label id="idadePet">{sIdade + atualPetExibindo.idade + sAnos}</label>
             </FotoPetMatch>
             <FooterMatch>
-                <Dislike onClick={passaPetDislike}>Dislike</Dislike>
-                <MaisInfo>Info</MaisInfo>
-                <Like onClick={passaPetLike}>Like</Like>
+                <Dislike onClick={passaPetDislike}><MdThumbDown/></Dislike>
+                <MaisInfo><MdToc/></MaisInfo>
+                <Like onClick={passaPetLike}><MdThumbUp/></Like>
             </FooterMatch>
 	</Container>
   );
