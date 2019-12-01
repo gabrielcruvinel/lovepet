@@ -28,6 +28,7 @@ export const Right = styled.div`
 
 export const BoxMatch = styled.div`
    
+    flex:1;
     max-height:900px;
     max-width:900px;
     position:fixed;
@@ -36,35 +37,10 @@ export const BoxMatch = styled.div`
     margin-bottom:190px;
     
 `;
-export const CardMatch = styled.div`
+// export const CardMatch = styled.div`
     
   
-    display:flex;
-    flex-direction:column;
-    border : 1px solid;
-`;
-
-export const FotoPetMatch = styled.div `
-    
-     flex:3;
-`;
-
-export const FooterMatch = styled.div`
-    
-    display:flex;
-  
-`;
-export const Like = styled.div`
-    flex:1;
-    border:1px solid;
-`;
-export const MaisInfo = styled.div`
-    flex:1;
-    border:1px solid;
-
-`;
-export const Dislike = styled.div`
-    flex:1;
-    border:1px solid;
-
-`;
+//     display:flex;
+//     flex-direction:column;
+//     border : 1px solid;
+// `;
