@@ -34,6 +34,9 @@ export const Like = styled.div`
         svg{
             margin-top: 50px
         }
+    &:active{
+        background:rgba(0,255,0,1);
+    }
 `;
 export const MaisInfo = styled.div`
     flex:1;
@@ -43,6 +46,9 @@ export const MaisInfo = styled.div`
     svg{
             margin-top: 50px
         }
+    &:active{
+        background:rgba(0,0,255,1);
+    }
 
 `;
 export const Dislike = styled.div`
@@ -53,5 +59,8 @@ export const Dislike = styled.div`
     svg{
             margin-top: 50px
         }
+    &:active{
+        background:rgba(255,0,0,1);
+    }
 
 `;
