@@ -15,6 +15,7 @@ export const FotoPetMatch = styled.div `
     margin-right: -370px;
     margin-top: -370px;
     padding: 256px;
+    font-size:20px;
     
 `;
 
